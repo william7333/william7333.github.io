@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<article class="post-article">
+    <header class="post-header">
+        <div class="post-header-meta">
+            {% for tag in page.tags %}
+            <span class="post-tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        <h1 class="post-title">{{ page.title }}</h1>
+        <div class="post-info">
+            <span class="post-date"><i class="fas fa-calendar-alt"></i> {{ page.date | date: "%Y년 %m월 %d일" }}</span>
+            <span class="post-read-time"><i class="fas fa-clock"></i> {{ content | number_of_words | divided_by: 200 |
+                plus: 1 }}분 읽기</span>
+        </div>
+        <div class="post-header-divider"></div>
+    </header>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-nav">
+            {% if page.previous %}
+            <a href="{{ page.previous.url | relative_url }}" class="post-nav-prev">
+                <span class="nav-label"><i class="fas fa-arrow-left"></i> Previous</span>
+                <span class="nav-title">{{ page.previous.title }}</span>
+            </a>
+            {% endif %}
+            {% if page.next %}
+            <a href="{{ page.next.url | relative_url }}" class="post-nav-next">
+                <span class="nav-label">Next <i class="fas fa-arrow-right"></i></span>
+                <span class="nav-title">{{ page.next.title }}</span>
+            </a>
+            {% endif %}
+        </div>
+    </footer>
+</article>

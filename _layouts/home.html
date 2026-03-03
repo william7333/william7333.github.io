@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="home-hero">
+    <div class="hero-badge">AI Engineering Blog</div>
+    <h1 class="hero-title">Welcome to<br><span class="gradient-text">William's AI Archive</span></h1>
+    <p class="hero-desc">RAG, LangGraph, Multi-Agent, Vector Search 등<br>대규모 LLM 시스템 설계의 모든 것을 기록합니다.</p>
+    <div class="hero-stats">
+        <div class="stat"><span class="stat-num">{{ site.posts | size }}</span><span class="stat-label">Posts</span>
+        </div>
+        <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Ideas</span></div>
+        <div class="stat"><span class="stat-num">2026</span><span class="stat-label">Since</span></div>
+    </div>
+</div>
+
+<div class="posts-grid">
+    {% for post in site.posts %}
+    <article class="post-card">
+        <div class="post-card-meta">
+            {% for tag in post.tags limit:2 %}
+            <span class="post-card-tag">{{ tag }}</span>
+            {% endfor %}
+            <span class="post-card-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        </div>
+        <h2 class="post-card-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+        <a href="{{ post.url | relative_url }}" class="read-more-btn">
+            Read More <i class="fas fa-arrow-right"></i>
+        </a>
+    </article>
+    {% endfor %}
+</div>

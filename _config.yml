@@ -1,48 +1,31 @@
 title: "William's AI Engineering Archive"
 name: "William (이태호)"
-description: "RAG, Vector Search, LangGraph, Elasticsearch, Neo4j 기반 AI 시스템 설계 기록"
+description: "RAG, LangGraph, Multi-Agent, Vector Search, LLM — 대규모 AI 시스템 설계의 모든 것을 기록합니다."
 url: "https://william7333.github.io"
 locale: "ko-KR"
 future: true
+timezone: "Asia/Seoul"
 
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "air" # Changed to a bright, modern skin
+theme: null
+remote_theme: null
 
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
-author:
-  name: "William (이태호)"
-  avatar: "https://github.com/william7333.png" # Real github avatar
-  bio: "AI Search, RAG, Multi-Agent 시스템 엔지니어"
-  location: "Seoul, Korea"
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/william7333"
-
-paginate: 5
-paginate_path: "/page:num/"
+gems:
+  - jekyll-feed
 
 defaults:
   - scope:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      share: true
-      related: true
-      sidebar:
-        nav: "docs" # Enable sidebar navigation
+      layout: post
 
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/william7333"
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - .git
