@@ -1,3 +1,49 @@
-theme: jekyll-theme-minimal
-title: Taeho | AI Search Engineer
-description: RAG, Vector Search, LangGraph, Elasticsearch, Neo4j 기반 AI 시스템 설계 기록
+title: "William's AI Engineering Archive"
+name: "William (이태호)"
+description: "RAG, Vector Search, LangGraph, Elasticsearch, Neo4j 기반 AI 시스템 설계 기록"
+url: "https://william7333.github.io"
+locale: "ko-KR"
+future: true
+
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+author:
+  name: "William (이태호)"
+  avatar: "/assets/images/bio-photo.jpg"
+  bio: "AI Search, RAG, Multi-Agent 시스템 엔지니어"
+  location: "Seoul, Korea"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/william7333"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:william7333@example.com"
+
+paginate: 5
+paginate_path: "/page:num/"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/william7333"
