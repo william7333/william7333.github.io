@@ -6,16 +6,9 @@ locale: "ko-KR"
 future: true
 timezone: "Asia/Seoul"
 
-theme: null
-remote_theme: null
-
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-sitemap
-
-gems:
-  - jekyll-feed
 
 defaults:
   - scope:
