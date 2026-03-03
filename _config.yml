@@ -24,9 +24,6 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/william7333"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:william7333@example.com"
 
 paginate: 5
 paginate_path: "/page:num/"
