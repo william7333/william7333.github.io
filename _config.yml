@@ -6,7 +6,7 @@ locale: "ko-KR"
 future: true
 
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "dark"
+minimal_mistakes_skin: "air" # Changed to a bright, modern skin
 
 plugins:
   - jekyll-paginate
@@ -17,7 +17,7 @@ plugins:
 
 author:
   name: "William (이태호)"
-  avatar: "/assets/images/bio-photo.jpg"
+  avatar: "https://github.com/william7333.png" # Real github avatar
   bio: "AI Search, RAG, Multi-Agent 시스템 엔지니어"
   location: "Seoul, Korea"
   links:
@@ -41,6 +41,8 @@ defaults:
       read_time: true
       share: true
       related: true
+      sidebar:
+        nav: "docs" # Enable sidebar navigation
 
 footer:
   links:

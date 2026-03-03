@@ -1,0 +1,131 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+// Custom High-tech AI Developer Style OVERRIDE
+$text-color: #2c3e50;
+$primary-color: #3b82f6;      // Vibrant Tech Blue
+$link-color: #2563eb;
+$link-color-hover: #1d4ed8;
+$info-color: #10b981;         // High-tech Green
+$background-color: #f8fafc;
+$code-background-color: #1e293b;
+$code-background-color-dark: #0f172a;
+
+body {
+  background-color: $background-color;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: -0.015em;
+}
+
+// Glowing Header
+.masthead {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.site-title {
+  font-weight: 800;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 4px 20px rgba(59, 130, 246, 0.3);
+}
+
+// Neumorphic / Glassmorphic Cards
+.archive__item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+}
+
+.archive__item-title {
+  color: #1e293b !important;
+  font-weight: 700;
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      color: $primary-color !important;
+    }
+  }
+}
+
+// Code Block Styling (Fira Code like)
+code, pre {
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
+  font-size: 0.9em;
+  border-radius: 8px;
+}
+pre.highlight {
+  background-color: $code-background-color-dark !important;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 1.5rem;
+}
+
+// Sidebar Profile Card
+.author__urls-wrapper {
+  .author__urls {
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+}
+.author__avatar img {
+  border-radius: 50%;
+  border: 3px solid #3b82f6;
+  box-shadow: 0px 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  color: #0f172a;
+  font-weight: 700;
+}
+h2 {
+  position: relative;
+  padding-bottom: 0.5rem;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    border-radius: 2px;
+  }
+}
+
+// Tags and Buttons
+.page__taxonomy-item {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border-radius: 20px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.8em;
+  font-weight: 600;
+  border: 1px solid #bae6fd;
+  &:hover {
+    background-color: #bae6fd;
+    text-decoration: none;
+  }
+}
